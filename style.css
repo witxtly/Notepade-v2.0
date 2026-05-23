@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@300;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1B1B1B;
+    min-height: 100vh;
+    min-height: 100dvh; /* учитывает мобильную адресную строку */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1rem;
+}
+
+.had {
+    text-align: center;
+    width: 100%;
+    max-width: 480px;
+    padding: 0 1rem;
+}
+
+.welcome {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(20px, 5vw, 35px); /* адаптивный размер */
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.brb {
+    font-weight: 500;
+}
+
+.start {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px 16px;
+    background-color: #3471FF;
+    color: white;
+    font-size: clamp(15px, 3vw, 20px);
+    width: min(290px, 100%); /* не выходит за экран */
+    height: auto;
+    min-height: 50px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.start img {
+    width: clamp(16px, 3vw, 20px);
+    height: clamp(16px, 3vw, 20px);
+    flex-shrink: 0;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.by {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(12px, 2.5vw, 15px);
+    font-weight: 300;
+    margin-bottom: 10px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 15px);
+    flex-wrap: wrap;
+}
+
+.fot {
+    padding: 8px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.fots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.fots img {
+    width: clamp(20px, 4vw, 24px);
+    height: clamp(20px, 4vw, 24px);
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding: 12px 1rem;
+}
+
+.twised {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(12px, 2.5vw, 15px);
+    font-weight: 500;
+}
+
+.inputAuth {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+    width: 100%;
+}
+
+.authBtn {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background-color: #3471FF;
+    color: white;
+    font-size: clamp(15px, 3vw, 20px);
+    width: min(170px, 100%);
+    height: auto;
+    min-height: 37px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.nicknamesUser,
+.passwordUser {
+    border-radius: 5px;
+    width: min(300px, 100%); /* не выходит за экран */
+    height: 36px;
+    text-align: center;
+    font-size: clamp(13px, 2.5vw, 15px);
+    padding: 4px 8px;
+}
+
+/* Маленькие экраны (до 400px) */
+@media (max-width: 400px) {
+    .welcome {
+        font-size: 18px;
+    }
+
+    .start {
+        font-size: 14px;
+        min-height: 44px;
+    }
+
+    .had {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Большие экраны (от 1024px) */
+@media (min-width: 1024px) {
+    .welcome {
+        font-size: 35px;
+    }
+
+    .start {
+        font-size: 20px;
+        height: 57px;
+    }
+}
