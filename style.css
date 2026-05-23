@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@300;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background-color: #1B1B1B;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+}
+
+
+.had {
+    text-align: center; 
+}
+
+
+.welcome {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+
+.brb {
+    font-weight: 500;
+}
+
+
+.start {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color:#3471FF;
+    color: white;
+    font-size: 20px;
+    width: 290px;
+    height: 57px;
+    font-weight: 500;
+    border: none;
+}
+
+
+.start img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    margin-right: 5px;
+}
+
+
+.by {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.fot {
+    padding: 8px 8px;
+    border-radius: 30px;
+    background-color: white;
+    margin-bottom: 5x;
+}
+
+
+.fots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+}
+
+
+.fots img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s; 
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto; 
+    
+}
+
+
+.twised {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.inputAuth {
+    display: none;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.authBtn {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color:#3471FF;
+    color: white;
+    font-size: 20px;
+    width: 170px;
+    height: 37px;
+    font-weight: 500;
+    border: none;
+}
+
+.nicknamesUser{
+    border-radius: 5px;
+    width: 300px;
+    height: 25px;
+    text-align: center;
+}
+
+.passwordUser {
+    border-radius: 5px;
+    width: 300px;
+    height: 25px;
+    text-align: center;
+}

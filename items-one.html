@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='items-one.css'>
+    <title>Web Notebooks</title>
+</head>
+<body>
+    <div class="info">
+        <h1>Web Notebooks</h1>
+        <p class="names">Why are web notebooks convenient?</p>
+        <p class="int">In today's world, information is the most valuable resource, and the ability to quickly capture it is becoming an essential skill. Online notebooks come in handy when you need to jot down an idea, create a to-do list, or capture an important thought. The main advantage of these tools is their accessibility from any device and the impossibility of losing notes, unlike paper ones.</p>
+        <p class="names">How does local saving work?</p>
+        <p class="int">One of the simplest and most effective solutions for creating a personal notebook is using localStorage technology. This is a built-in mechanism in modern browsers that allows data to be stored directly on the user's device without having to send it to a server.</p>
+        <p class="local">A web notebook based on localStorage works like this:</p>
+        <ul>
+            <li><b>Automatic saving:</b> every time you change the text, the data is instantly written to the browser's memory</li>
+            <li><b>Restoring entries:</b> When you reopen the page, the text is automatically loaded from the saved state</li>
+            <li><b>Complete privacy:</b> all information remains on the user's device and is not transferred to third parties</li>
+        </ul>
+        <p class="names">How to implement this</p>
+        <p class="int">Creating such a notepad doesn't require complex server-side technologies. All you need is an HTML page with a textarea element for text input and some JavaScript code. When the page loads, the script checks for saved text in localStorage and inserts it into the input field. Every time the content changes, the saved data is automatically updated.</p>
+        <p class="int">For convenience, you can add a clear button that deletes both the field contents and the data from storage. This approach is ideal for quick notes, shopping lists, or temporary notes that you always need to have on hand.</p>
+        <p class="names">Benefits for users</p>
+        <p class="int">Web notebooks with local storage solve several important problems. First, they work even without an internet connection. Second, users don't need to create an account or remember passwords. Third, they're an eco-friendly solution that doesn't put a strain on servers or require a constant internet connection.</p>
+        <div class="back">
+            <a href="main.html"><button class="btn-back">Back</button></a>
+        </div>
+    </div>
+</body>
+</html>
