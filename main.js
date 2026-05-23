@@ -33,11 +33,9 @@ let realcolor = document.querySelector('.colortext')
 let noteCounter = 1
 let deliteMode = false
 
-// Отслеживаем активную заметку и активное текстовое поле
 let activeNote = null
 let activeTextArea = null
 
-// ─── Слушатели на кнопки управления — ОДИН РАЗ, вне newfile ───────────────
 
 del.addEventListener('click', function () {
     if (!activeNote || !activeTextArea) return
@@ -119,7 +117,7 @@ colorInput.addEventListener('input', function () {
     saveNotes()
 })
 
-// ─── Создание новой заметки ────────────────────────────────────────────────
+
 
 newfile.addEventListener('click', function (event) {
     event.preventDefault()
@@ -146,7 +144,6 @@ newfile.addEventListener('click', function (event) {
     notesn.addEventListener('click', function (event) {
         event.preventDefault()
 
-        // Если режим удаления — удаляем сразу при клике на заметку
         if (deliteMode === true) {
             notesn.remove()
             textField.remove()
@@ -156,7 +153,6 @@ newfile.addEventListener('click', function (event) {
             return
         }
 
-        // Запоминаем активные элементы
         activeNote = notesn
         activeTextArea = textField
 
@@ -168,7 +164,6 @@ newfile.addEventListener('click', function (event) {
         numText.innerHTML = 'Notes ' + notesn.id
         chan.style.display = 'block'
 
-        // Показываем только нужное поле
         document.querySelectorAll('.texting').forEach(function (textFieldItem) {
             if (textFieldItem.id === notesn.id) {
                 textFieldItem.style.display = 'flex'
@@ -181,13 +176,11 @@ newfile.addEventListener('click', function (event) {
     saveNotes()
 })
 
-// ─── Режим удаления ────────────────────────────────────────────────────────
 
 delite.addEventListener('click', function () {
     deliteMode = true
 })
 
-// ─── Домой ────────────────────────────────────────────────────────────────
 
 home.addEventListener('click', function (event) {
     event.preventDefault()
@@ -200,14 +193,12 @@ home.addEventListener('click', function (event) {
     activeTextArea = null
 })
 
-// ─── Сохранение ───────────────────────────────────────────────────────────
 
 save.addEventListener('click', function () {
     saveornot.innerHTML = 'Notepad Status: saved'
     saveNotes()
 })
 
-// ─── Поиск ────────────────────────────────────────────────────────────────
 
 searchButton.addEventListener('click', function () {
     let notesnAll = document.querySelectorAll('.notesn')
@@ -219,7 +210,6 @@ searchButton.addEventListener('click', function () {
     }
 })
 
-// ─── Скачать ──────────────────────────────────────────────────────────────
 
 downloadBtn.addEventListener('click', function () {
     if (!activeTextArea) return
@@ -231,7 +221,6 @@ downloadBtn.addEventListener('click', function () {
     link.click()
 })
 
-// ─── localStorage ─────────────────────────────────────────────────────────
 
 function saveNotes() {
     let textareas = document.querySelectorAll('.texting')
